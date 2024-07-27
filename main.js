@@ -4,9 +4,7 @@ function tocaSom(idElementoAudio){
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
-let contador = 0;
-
-while (contador < listaDeTeclas.length) {
+for (let contador = 0; contador < listaDeTeclas.length; contador++) {
 
     const tecla = listaDeTeclas[contador]; //guarda quais são as teclas que podem ser clicadas
     const instrumento = tecla.classList[1];//guarda quais são os adios disponiveis, usando o classe unica de cada tag audio
@@ -15,6 +13,4 @@ while (contador < listaDeTeclas.length) {
     tecla.onclick = function() { // função Anonima
         tocaSom(idAudio);
     }
-
-    contador += 1;
 }
